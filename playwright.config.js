@@ -15,7 +15,7 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
   webServer: {
-    command: `npx serve src -l ${PORT}`,
+    command: `npx --no-install serve src -l ${PORT}`,
     url: baseURL,
     reuseExistingServer: !process.env.CI,
   },
