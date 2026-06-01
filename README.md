@@ -61,7 +61,7 @@ Three MCP servers are pre-configured in the template:
 
 | Server | Purpose | Auth |
 |--------|---------|------|
-| `github` | Read/write GitHub repos, PRs, issues | `GITHUB_TOKEN` env var |
+| `github` | Read/write GitHub repos, PRs, issues | `GITHUB_CLAUDE_KEY_PERSONAL` env var |
 | `figma` | Inspect and sync Figma design files | `FIGMA_ACCESS_TOKEN` env var |
 | `filesystem` | Scoped file access to `src/`, `docs/`, `tests/` | None |
 
@@ -78,19 +78,19 @@ Store tokens as environment variables — never in `.mcp.json` or committed file
 
 ```bash
 # macOS / zsh
-echo 'export GITHUB_TOKEN=your_token_here' >> ~/.zshrc
+echo 'export GITHUB_CLAUDE_KEY_PERSONAL=your_token_here' >> ~/.zshrc
 source ~/.zshrc
 ```
 
 ```bash
 # Linux / bash
-echo 'export GITHUB_TOKEN=your_token_here' >> ~/.bashrc
+echo 'export GITHUB_CLAUDE_KEY_PERSONAL=your_token_here' >> ~/.bashrc
 source ~/.bashrc
 ```
 
 ```cmd
 # Windows (PowerShell / Command Prompt) — restart terminal after
-setx GITHUB_TOKEN "your_token_here"
+setx GITHUB_CLAUDE_KEY_PERSONAL "your_token_here"
 ```
 
 #### Figma Token (Optional)
@@ -110,7 +110,7 @@ source ~/.zshrc
 Verify both tokens are available:
 
 ```bash
-echo $GITHUB_TOKEN
+echo $GITHUB_CLAUDE_KEY_PERSONAL
 echo $FIGMA_ACCESS_TOKEN
 ```
 
