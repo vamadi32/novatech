@@ -97,6 +97,12 @@
     display: flex;
   }
 
+  /* Resolve the dropdown against the full-width sticky header,
+     not the toggle-width .nav, so it spans the viewport cleanly. */
+  .nav {
+    position: static;
+  }
+
   .nav__menu {
     position: absolute;
     top: 100%;
